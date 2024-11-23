@@ -1,0 +1,155 @@
+header{
+    margin: 10px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+header .search-box input[type="text"]{
+    background-color: rgb(244, 243, 243);
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 2px;
+}
+
+main{
+    background-color: rgb(238, 237, 237);
+    padding: 20px;
+}
+
+main section{
+    background-color: white;
+}
+
+main .category{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    margin-bottom: 20px;
+}
+
+main .category .category-content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+main .category .category-content p{
+    margin: 10px auto;
+}
+
+main .banner-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-template-rows: auto auto; /* Two rows: one for the large img, one for the smaller imgs */
+    gap: 20px 10px; /* Optional: Adds spacing between images */
+}
+
+main .banner-container #banner-item1{
+    grid-column: 1 / -1; /* Spans across all columns in the first row */
+    width: 100%;
+}
+
+main .banner-container #banner-item2,
+main .banner-container #banner-item3,
+main .banner-container #banner-item4{
+    width: 100%;
+}
+
+main .banner-container .banner-items img{
+    width: 100%;
+    height: 100%;
+}
+
+
+main .lower-banner{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    padding: 20px 10px;
+}
+
+main .lower-banner #lower-banner-head1{
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+main .lower-banner .lower-banner-item{
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+}
+main .lower-banner .lower-banner-item{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 20px
+}
+
+footer{
+    padding: 20px;
+    background-color: rgb(42, 41, 41);
+}
+
+footer .footer-nav{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    
+}
+
+footer ul .footer-head{
+    margin-bottom: 20px;
+}
+
+footer ul li{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: rgb(131, 130, 130);
+    margin-bottom: 10px;
+}
+
+footer ul li a{
+    color: white;
+}
+
+footer .end{
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* Utility */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(54, 125, 231);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+ul{
+    list-style-type: none; 
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}

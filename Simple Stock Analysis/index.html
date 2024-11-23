@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Stock Market Analysis</h1>
+    </header>
+
+    <main>
+      <section class="chart">
+        <canvas id="stock-chart"></canvas>
+        <div class="timestamp-container hide">
+            <button class="timestamp-btn" data-timestamp-value="1mo" onclick="setDOMData.changeTimeStamp(event)">1 Month</button>
+            <button class="timestamp-btn" data-timestamp-value="3mo" onclick="setDOMData.changeTimeStamp(event)">3 Month</button>
+            <button class="timestamp-btn" data-timestamp-value="1y" onclick="setDOMData.changeTimeStamp(event)">1 Year</button>
+            <button class="timestamp-btn" data-timestamp-value="5y" onclick="setDOMData.changeTimeStamp(event)">5 Years</button>
+        </div>
+      </section>
+
+      <section class="list">
+        <ul class="stock-profile">
+          <!-- <li>
+                    <button>
+                        <span></span>
+                    </button>
+                    <span></span>
+                    <span></span>
+                </li> -->
+        </ul>
+      </section>
+
+      <section class="details">
+        <div class="title">
+          <span class="stock-name ft-bold"></span>
+          <span class="stock-profit ft-bold"></span>
+          <span class="stock-bookvalue ft-bold"></span>
+        </div>
+        <div class="description">
+          <p class="description-item"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

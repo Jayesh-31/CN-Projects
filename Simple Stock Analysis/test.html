@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Analysis Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="stockChart" width="800" height="400"></canvas>
+
+    <script>
+        const ctx = document.getElementById('stockChart').getContext('2d');
+
+        const labels = ['January', 'February', 'March', 'April', 'May']; // X-axis labels
+        const dataValues = [100, 110, 120, 115, 125]; // Y-axis values
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Stock Price',
+                        data: dataValues,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 2,
+                        fill: false,
+                        pointRadius: 0 // No fixed points visible on the line
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                interaction: {
+                    mode: 'nearest', // Interacts with the nearest point
+                    axis: 'x', // Restrict interaction to the x-axis
+                    intersect: false // Allow interaction even between points
+                },
+                plugins: {
+                    tooltip: {
+                        enabled: true,
+                        mode: 'nearest',
+                        intersect: false,
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                // Get the value dynamically based on hover position
+                                const value = tooltipItem.raw; 
+                                return `Value: ${value}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Months'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Price'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return `$${value}`; // Add $ sign to Y-axis labels
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,294 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(255, 238, 219);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+main .left{
+    background-color: black;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 50px;
+    position: sticky;
+    top: 20px;
+}
+
+main .left .profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+main .left .profile img{
+    width: 60%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+main .left .profile p{
+    color: white;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+main .left .nav-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 50px;
+}
+
+main .left .nav{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.5em;
+    color: white;
+    background-color: black;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+main .left .nav:hover{
+    cursor: pointer;
+    color: rgb(138, 193, 253);
+}
+
+main .left .nav .material-symbols-outlined{
+    font-size: 1.5em;
+}
+
+main .right{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main .right .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+main .right .header h1{
+    font-size: 3.5em;
+    font-family: monospace;
+}
+
+main .right .header input{
+    margin: 15px;
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: medium;
+    padding: 10px;
+}
+
+main .right .content{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+main .right .content h1{
+    text-decoration: underline;
+}
+
+
+main .right .graph img{ 
+    width: 50%;
+    height: 90%;
+    border-radius: 40px;
+}
+
+main .right .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+main .right .dashboard-data{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    width: 100%;
+}
+
+main .right .dashboard-data .data{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    width: 60%;
+    border-radius: 30px;
+}
+
+main .right .dashboard-data .data p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main .right .dashboard-data .data span{
+    align-self: flex-end;
+}
+
+main .right .dashboard-data .data:nth-child(1){
+    background-color: rgb(173, 246, 173);
+}
+main .right .dashboard-data .data:nth-child(1):hover{
+    background-color: rgb(135, 244, 135);
+    cursor: pointer;
+}
+
+main .right .dashboard-data .data:nth-child(2){
+    background-color: rgb(240, 240, 163);
+}
+main .right .dashboard-data .data:nth-child(2):hover{
+    background-color: rgb(242, 242, 118);
+    cursor: pointer;
+}
+
+main .right .dashboard-data .data:nth-child(3){
+    background-color: rgb(251, 204, 212);
+}
+main .right .dashboard-data .data:nth-child(3):hover{
+    background-color: rgb(252, 159, 174);
+    cursor: pointer;
+}
+
+main .right .dashboard-data .data:nth-child(4){
+    background-color: rgb(175, 175, 255);
+}
+main .right .dashboard-data .data:nth-child(4):hover{
+    background-color: rgb(135, 135, 248);
+    cursor: pointer;
+}
+
+main .right .user-table{
+    padding: 50px;
+}
+
+main .right .user-table table{
+    width: 80%;
+}
+
+main .right .user-table table, .user-table th, .user-table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+.user-table th{
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+}
+
+.user-table tr:nth-child(even){
+    background-color: rgb(200, 200, 200);
+}
+.user-table tr:nth-child(even):hover{
+    background-color: rgb(172, 172, 172);
+}
+
+.user-table tr:nth-child(odd){
+    background-color: rgb(232, 231, 231);
+}
+.user-table tr:nth-child(odd):hover{
+    background-color: rgb(247, 245, 245);
+}
+
+.contact-details{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px
+}
+
+.contact-details *{
+    border-radius: 40px;
+}
+
+.contact-details form{
+    background-color: white;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.contact-details form h1{
+   text-align: center;
+}
+
+.contact-details form *{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.contact-details form input, .contact-details form textarea{
+    border: 1px solid rgb(106, 106, 106);
+    padding: 10px;
+}
+
+.contact-details form input:focus, .contact-details form textarea:focus{
+    background-color: rgb(229, 229, 229);
+}
+
+.contact-details form textarea{
+    height: 35%;
+}
+
+.contact-details form input[type="button"] {
+    background-color: rgb(131, 255, 131);
+    padding: 15px;
+    border: 1px solid rgb(147, 147, 147);
+}
+
+.contact-details form input[type="button"]:hover {
+    background-color: rgb(109, 250, 109);
+    cursor: pointer;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+}
+.footer .social-media i{
+    margin: 0px 10px;
+    font-size: 1.4em;
+}
+
+.footer .social-media i:hover{
+    font-size: 1.6em;
+}
+
+
+
+
+

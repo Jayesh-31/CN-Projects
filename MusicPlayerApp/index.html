@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="title">Music Player</h1>
+    <div class="main">
+      <section class="all-songs">
+        <!-- <div class="filter-container">
+          <label for="filter-song">Filter By Genre : </label>
+          <select name="filter-song" id="filter-song">
+            <option value="all">All</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="hip-hop">Hip Hop</option>
+          </select>
+        </div> -->
+        <div class="all-songs-container">
+          <h3 class="songs-header">
+            All Songs
+            <span class="filter-container">
+              <label for="filter-song">Filter By Genre : </label>
+              <select name="filter-song" id="filter-song">
+                <option value="all">All</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="hip-hop">Hip Hop</option>
+              </select>
+            </span>
+          </h3>
+          <div id="song-list" class="song-list">
+            <!--Songs-->
+          </div>
+        </div>
+      </section>
+
+      <section class="song-card-container">
+        <div class="card">
+          <img src="media/img1.webp" alt="img1" />
+          <h3 class="song-name">Everybody Get Up</h3>
+          <p class="artist-name">-Everet Almond</p>
+        </div>
+        <div class="audio-action">
+          <audio controls>
+            <source
+              src="songs/Everybody Get Up - Everet Almond.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+        </div>
+        <div class="song-btn">
+          <button class="prev">Prev</button>
+          <button class="add-to-playlist">Add to Playlist</button>
+          <button class="next">Next</button>
+        </div>
+      </section>
+
+      <section class="playlist">
+        <div>
+          <input
+            type="text"
+            name="playlist-name"
+            id="playlist-name"
+            placeholder="Enter the playlist name"
+          />
+          <button class="create-playlist">Create Playlist</button>
+        </div>
+        <div class="playlist-container">
+          <div class="current-playlist">
+            <h3>Current Playlist</h3>
+            <div class="current-playlist-item"></div>
+          </div>
+          <div class="all-playlist">
+            <h3>All Playlist</h3>
+            <div class="playlist-name">Default</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/scripts/songObject.js"></script>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>

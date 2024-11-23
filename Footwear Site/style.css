@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+.red-bg{
+    background-color: red;
+}
+
+header{
+    background-color: black;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.198);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+/* Header Starts*/
+header .logo{
+    margin-left: 20%;
+}
+
+header img{
+    width: 20%;
+    height: 80%;
+}
+
+header .nav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+header .nav-list{
+    height: 100%;
+    padding: 20px 25px;
+}
+
+header .nav a{
+    color: white;
+    padding: 20px 25px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: inherit;
+    transition: background-color 0.3s ease-in;
+}
+
+header .nav a:hover{
+    background-color: rgba(255, 255, 255, 0.187);
+}
+/* Header Ends*/
+
+/* Main Starts*/
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+  /* Banner Starts */
+main .banner{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.banner .bg-img{
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Media/red-and-white-air-jordan-1-shoe-on-concrete-floor.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+}
+
+.banner .text{
+    color: white;
+    position: absolute;
+    top: 40%;
+    bottom: 30%;
+    left: 20%;
+    right: 20%;
+    z-index: 2;
+}
+
+.banner .text *{
+    margin: 50px 0px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 40px 0px;
+}
+
+.product-container .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item{
+    width: 20rem;
+    height: 30rem;
+    margin: 1rem;
+    background-color: aliceblue;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5), 0px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.product-item:hover{
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.product-item > img{
+    width: 100%;
+    height: 80%;
+
+}
+
+.product-container h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-item h3, .product-item p{
+    text-align: center;
+    margin: 10px 0px;
+}
